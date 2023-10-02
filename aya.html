@@ -1,151 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santet online</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
-    <meta property="og:image" content="https://www.clipartkey.com/mpngs/b/265-2659142_clipart-death.png">
-    <meta property="og:description" content="LET'S KILL YOUR ENEMYY">
-    <meta property="og:title" content="Santet Online">
-    <link rel="shortcut icon" href="https://www.pngjoy.com/pngl/36/838223_grim-reaper-death-angel-cartoon-transparent-png.png">
+  <head>
     <style>
-        * {
-            font-family: 'Poor Story', cursive;
-        }
-        body {
-            background-color: black;
-        }
-        .santet {
-            background-image: url('https://www.pngjoy.com/pngl/36/838223_grim-reaper-death-angel-cartoon-transparent-png.png');
-            background-size: cover;
-            background-position: center;
-            width: 235px;
-            height: 200px;
-            margin: 100px auto 0px auto;
-        }
-        .start {
-            color: white;
-            text-align: center;
-			cursor: pointer;
-        }
-        .letter-close {
-            display: block;
-        }
-        .letter-open {
-            display: none;
-        }
-        .rtanny {
-            width: 235px;
-            height: 200px;
-            background-image: url('https://www.pngjoy.com/pngl/36/838223_grim-reaper-death-angel-cartoon-transparent-png.png');
-            background-size: cover;
-            margin: 100px auto 0px auto;
-        }
-        h1 {
-            text-align: center;
-            color: white;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        .messagebox {
-			color: white;
-            margin-top: 100px;
-			margin-left: 100px;
-            font-size: 25px
-        }
-		.mybtn {
-			color: white;
-			font-size: 20px;
-			font-weight: bold;
-			padding-left: 140px;
-			padding-right: 140px;
-			padding-bottom: 10px;
-			padding-top: 10px;
-			background-color: red;
-			border-radius: 10px;
-		}
-        @media screen and (max-width: 760px) {
-            .messagebox {
-                width: 300px;
-                font-size: 20px;
-                padding: 20px;
-				margin-left: 10px;
-				margin-top: 40px;
-            }
-            .rtanny {
-                width: 150px;
-                height: 150px;
-                margin: 70px auto 0px auto;
-            }
-            h1 {
-                font-size: 28px;
-            }
-            .santet {
-                margin: 105px auto 0px auto;
-				margin-left: 75px;
-            }
-			.mybtn {
-			font-size: 20px;
-			padding-left: 85px;
-			padding-right: 85px;
-			padding-bottom: 10px;
-			padding-top: 10px;
-			}
-        }
+      .head{
+        text-align: center; 
+        background-image: url(https://static.wikia.nocookie.net/bandori/images/c/c5/Bg_heading.png); 
+        background-color: #33DDAA;  
+      }
+      .text{
+        margin-right: 500px;
+        text-align: justify;
+        color: #FF88BB;
+        font-size: 18px;
+      }
     </style>
-    <script>
-        function Next_page() {
-            document.getElementsByClassName("letter-close")[0].style.display = 'none'
-            document.getElementsByClassName("letter-open")[0].style.display = 'block'
-        }
-        function go_rtan() {
-            alert('TARGET TERKUNCI AKAN SEGERA MATI!!!')
-			alert('FOLLOW DULU GAN :v')
-            window.location.href="https://www.instagram.com/riyuuki_h/"
-        }
-    </script>
-</head>
-<body>
-    <div class="letter-close">
-		<h1 class="start">Welcome to santet online</h1>
-        <div class="santet"></div>
-        <h1 class="start" onclick="Next_page()">>>Let's Start Your Revange<<</h1>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maruyama Aya</title>
+  </head>
+  <body background="asset/BandBG4.png">
+    <div class="head">
+      <img src="asset/Band_4.png" width="75px" height="75px" style="margin-bottom: 10px; margin-right: 20px;">
+      <img src="asset/pastel_palettes_logo.png" style="margin-top: 3px;">
+      <img src="asset/Band_4.png" width="75px" height="75px" style="margin-bottom: 10px; margin-left: 20px;">
     </div>
-    <div class="letter-open">
-        <div class="rtanny"></div>
-		<h1>Isi Data Target Dengan Benar</h1>
-        <div class="messagebox">
-	 <p>
-            Nama Lengkap: <input type="text" />
-        </p>
-		</br>
-		</br>
-        <p>
-            Tempat Tinggal: <input type="text" />
-        </p>
-		</br>
-		</br>
-		 <p>
-            Alasan di Santet: <input type="text" />
-        </p>
-		</br>
-		</br>
-       <label for="cara">Pilih Cara Mati:</label>
-  <select name="cara" id="cara">
-    <option value="Kebakar">Kebakar</option>
-    <option value="Serangan Jantung">Serangan Jantung</option>
-    <option value="Dihantui Sampai Bundir">Dihantui Sampai Bundir</option>
-    <option value="Langsung Tewas">Langsung Tewas</option>
-  </select>
-  <p>
-            Cara Lain Mati: <input type="text" />
-        </p>
-		</br>
-		</br>
-		<button class="mybtn" onclick="go_rtan()">BUNUH!!!</button>
-        </div>
-    </div>
-</body>
+    <img src="asset/title.png" width="20%" height="20%" style="margin-left: 40%; margin-top: 10px;">
+    <br>  
+    <img src="asset/name.png">
+    <br>
+    <img src="asset/aya.png" width="290px" height="400px" style="float: left;">
+    <img src="asset/aya_chibi.png" width="450px" height="450px" style="float: right;">
+    <font color="#FF88BB" size="32px"><i><b>Profile</b></i> <br></font>
+    <p class="text">
+      Maruyama Aya is a first-year student at Yotsuba Women's University, as well as the leader and vocalist of Pastel*Palettes.
+      She also works part-time at the fast-food store with Kanon.</p>
+    <p class="text">
+      Aya has large pink eyes and shoulder-length, pastel pink hair with wavy ends. Her bangs are straight cut with a small slant to the corner and a split off-center. 
+      Her forelocks are thin and curled. Usually, she wears her hair loose, but when performing or training, she ties it up in pigtails.
+    </p>
+    <p class="text">
+      Her casual attire is flirty and feminine, with soft colors, floral accents, and jewelry. In her initial outfit, Aya wears a short, 
+      frilly white dress with a pink floral pattern, and bangle, a pink jeweled necklace, and carries a pink shoulder bag.
+    </p>
+    <p class="text">      
+      During winter, she wears an off-shoulder knitted white sweater, a gray-purple miniskirt, and pink thigh-high boots with fluffy edges. 
+      The outfit is completed by a heart necklace. During summer, she wears a white-and-pink striped dress with lace and flowers on the top, and a headband as a decoration.
+    </p>
+    <br>
+    <br>
+    <hr color="#FF88BB" size="5px">
+    <font color="#FF88BB" size="32px"><i><b>Character Introduce</b></i> <br></font>
+    <br>
+    <video controls>
+      <source src="asset/intro.mp4" type="video/mp4"/>
+    </video>
+    <br>
+    <br>
+    <hr color="#FF88BB" size="5px">
+    <font color="#FF88BB" size="32px"><i><b>Song</b></i> <br></font>
+    <p class="text">Shuwarin☆Drea~min</p>
+    <audio controls>
+      <source src="asset/shwarin.mp3" type="audio/mpeg" />
+    </audio>
+    <font color="#33DDAA" style="margin-left: 300px;">By: Achmad Muzakki Fauzi</font>
+  </body>
 </html>
