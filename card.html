@@ -6,8 +6,8 @@
     <title>Happy Birthday!</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
-    <meta property="og:image" content="https://s1.zerochan.net/Emilia.600.2509385.jpg">
-    <meta property="og:description" content="My messsage for you">
+    <meta property="og:image" content="https://agiftidea.com/wp-content/uploads/2020/04/birthday-celebration.jpeg">
+    <meta property="og:description" content="Go check out my card!">
     <meta property="og:title" content="Happy Birthday!">
     <link rel="shortcut icon" href="https://www.iconsdb.com/icons/preview/red/gift-xxl.png">
     <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/global/confetti.js"></script>
@@ -65,6 +65,24 @@
             padding: 30px;
             box-shadow: 0px 0px 10px 0px white;
         }
+        .image {
+            width: 230px;
+            position: absolute;
+            top: 450px;
+            left: 390px;
+            rotate: -29deg;
+            z-index: -1;
+
+        }
+        .puck {
+            width: 150px;
+            z-index: 1;
+            position: absolute;
+            top: 400px;
+            right: 450px;
+
+        }
+
         @media screen and (max-width: 760px) {
             .messagebox {
                 width: 300px;
@@ -83,6 +101,18 @@
             .envelope {
                 margin: 150px auto 0px auto;
             }
+            .image{
+                width: 230px;
+                position: absolute;
+                top: 385px;
+                left: 10px;
+                rotate: -25deg;
+            }
+            .puck {
+                width: 120px;
+                position: absolute;
+                top: 320px;
+                right: 50px;
         }
     </style>
     <script>
@@ -102,8 +132,10 @@
         <h2 class="envelope-msg">Open the Letter!</h2>
     </div>
     <div class="letter-open">
+        <embed hidden src="asset/bd_theme.mp3" type="audio/mpeg">
         <div class="rtanny" onclick="go_rtan()"></div>
         <h1>Congratulations!</h1>
+        <img src="asset/emilia.png" class="image">
         <div class="messagebox">
             Yoo Kisama, <br/>
             Otanjoubi Omedetou!!<br/>
@@ -115,6 +147,8 @@
             <br>
             Klik gambar diatas buat liat kejutan <br>
         </div>
+        <img src="asset/puck.png" class="puck">
+        <br>
     </div>
 </body>
 </html>
