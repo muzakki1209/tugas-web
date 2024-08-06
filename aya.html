@@ -21,6 +21,43 @@
       .float-in {
         animation: floatIn 1s ease-in-out forwards;
       }
+      
+      .char-card{
+        display: flex;
+        width: 150%;
+        gap: 1rem;
+      }
+
+      .horizontal-scroll{
+        width: 100%;
+        overflow-x: scroll;
+      }
+
+      .horizontal-scroll::-webkit-scrollbar{
+        display: none;
+      }
+
+      .item{
+        position: relative;
+        overflow: hidden;
+      }
+
+      .item figcaption{
+        position: absolute;
+        bottom: -4rem;
+        background-color: black;
+        padding-top: 10px;
+        width: 100%;
+        height: 50px;
+        color: white;
+        text-align: center;
+        opacity: 60%;
+        transition: all 200ms;
+      }
+
+      .item:hover figcaption{
+        bottom: 0;
+      }
     </style>
   </head>
   <body class="m-0 p-0 font-serif">
@@ -46,7 +83,7 @@
         </div>
 
         <!-- Profile Description -->
-        <div id="description" class="mt-10 p-5 text-pink-500 lg:w-1/2">
+        <div id="description" class="mt-10 p-5 text-[#FF88BB] lg:w-1/2">
           <h1 class="text-4xl text-center italic mx-auto lg:text-start">Profile</h1>
           <p class="text-sm text-justify mx-auto mt-5">
             Maruyama Aya is a first-year student at Yotsuba Women's University, as well as the leader and vocalist of Pastel*Palettes. She also works part-time at the fast-food store with Kanon.
@@ -71,20 +108,56 @@
         </div>
       </section>
 
-      <hr class="border-2 border-pink-500 my-4" />
+      <hr class="border-2 border-[#FF88BB] my-4" />
 
       <!-- Character Introduction -->
       <section id="introduction" class="p-5 mx-auto">
-        <h1 class="text-3xl lg:text-4xl text-center text-pink-500 italic mb-5">Character Introduction</h1>
-        <video src="asset/intro.mp4" controls class="mx-auto border-4 border-pink-500 rounded-xl"></video>
+        <h1 class="text-3xl lg:text-4xl text-center text-[#FF88BB] italic mb-5">Character Introduction</h1>
+        <video src="asset/intro.mp4" controls class="mx-auto border-4 border-[#FF88BB] rounded-xl"></video>
       </section>
 
-      <hr class="border-2 border-pink-500 my-4" />
+      <hr class="border-2 border-[#FF88BB] my-4" />
+
+      <!-- Character Card -->
+      <section id="char-card">
+        <h1 class="text-3xl lg:text-4xl text-center text-[#FF88BB] italic mb-5 mt-5">Character Card</h1>
+        <div class="horizontal-scroll">
+          <div class="char-card">
+            <figure class="item">
+              <img src="card/Graduation_(Maruyama_Aya)_T.png" alt="Graduation_">
+              <figcaption>Graduation (Maruyama Aya)</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="card/Happily_ever_after_T.png" alt="Happily_ever_after_T">
+              <figcaption>Happily Ever After</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="card/Layers_of_Feelings_T.png" alt="Layers_of_Feelings_T">
+              <figcaption>Layers of Feelings</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="card/Perfect_Smile.png" alt="Perfect_Smile">
+              <figcaption>Perfect Smile</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="card/There,_Perfect!.png" alt="There">
+              <figcaption>There, Perfect!</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="card/When_You_Turn_Around....png" alt="When_You_Turn_Around">
+              <figcaption>When You Turn Around</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+
+      <hr class="border-2 border-[#FF88BB] my-4" />
 
       <!-- Song -->
       <section id="song" class="p-5 mx-auto mb-5">
-        <h1 class="text-3xl lg:text-4xl text-center text-pink-500 italic mb-5">Song</h1>
-        <audio src="asset/shwarin.mp3" controls class="mx-auto border-4 border-pink-500 rounded-xl"></audio>
+        <h1 class="text-3xl lg:text-4xl text-center text-[#FF88BB] italic mb-5">Song</h1>
+        <audio src="asset/shwarin.mp3" controls class="mx-auto border-4 border-[#FF88BB] rounded-xl"></audio>
       </section>
 
       <!-- Footer -->
