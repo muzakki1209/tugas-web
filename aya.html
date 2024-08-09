@@ -21,43 +21,6 @@
       .float-in {
         animation: floatIn 1s ease-in-out forwards;
       }
-      
-      .char-card{
-        display: flex;
-        width: 150%;
-        gap: 1rem;
-      }
-
-      .horizontal-scroll{
-        width: 100%;
-        overflow-x: scroll;
-      }
-
-      .horizontal-scroll::-webkit-scrollbar{
-        display: none;
-      }
-
-      .item{
-        position: relative;
-        overflow: hidden;
-      }
-
-      .item figcaption{
-        position: absolute;
-        bottom: -4rem;
-        background-color: black;
-        padding-top: 10px;
-        width: 100%;
-        height: 50px;
-        color: white;
-        text-align: center;
-        opacity: 60%;
-        transition: all 200ms;
-      }
-
-      .item:hover figcaption{
-        bottom: 0;
-      }
     </style>
   </head>
   <body class="m-0 p-0 font-serif">
@@ -117,45 +80,43 @@
       </section>
 
       <hr class="border-2 border-[#FF88BB] my-4" />
-<<<<<<< HEAD
 
       <!-- Character Card -->
-      <section id="char-card">
+      <section id="char-card" class="relative">
         <h1 class="text-3xl lg:text-4xl text-center text-[#FF88BB] italic mb-5 mt-5">Character Card</h1>
-        <div class="horizontal-scroll">
-          <div class="char-card">
-            <figure class="item">
-              <img src="card/Graduation_(Maruyama_Aya)_T.png" alt="Graduation_">
-              <figcaption>Graduation (Maruyama Aya)</figcaption>
-            </figure>
-            <figure class="item">
-              <img src="card/Happily_ever_after_T.png" alt="Happily_ever_after_T">
-              <figcaption>Happily Ever After</figcaption>
-            </figure>
-            <figure class="item">
-              <img src="card/Layers_of_Feelings_T.png" alt="Layers_of_Feelings_T">
-              <figcaption>Layers of Feelings</figcaption>
-            </figure>
-            <figure class="item">
-              <img src="card/Perfect_Smile.png" alt="Perfect_Smile">
-              <figcaption>Perfect Smile</figcaption>
-            </figure>
-            <figure class="item">
-              <img src="card/There,_Perfect!.png" alt="There">
-              <figcaption>There, Perfect!</figcaption>
-            </figure>
-            <figure class="item">
-              <img src="card/When_You_Turn_Around....png" alt="When_You_Turn_Around">
-              <figcaption>When You Turn Around</figcaption>
-            </figure>
-          </div>
+        <div id="carousel" class="flex gap-4 overflow-hidden">
+          <figure class="flex-shrink-0 w-120 h-80 relative group">
+            <img src="card/Graduation_(Maruyama_Aya)_T.png" alt="Graduation_" class="w-full h-full object-cover" />
+            <figcaption class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center py-2 transform translate-y-full group-hover:translate-y-0 transition duration-300">Graduation (Maruyama Aya)</figcaption>
+          </figure>
+          <figure class="flex-shrink-0 w-120 h-80 relative group">
+            <img src="card/Happily_ever_after_T.png" alt="Happily_ever_after_T" class="w-full h-full object-cover" />
+            <figcaption class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center py-2 transform translate-y-full group-hover:translate-y-0 transition duration-300">Happily Ever After</figcaption>
+          </figure>
+          <figure class="flex-shrink-0 w-120 h-80 relative group">
+            <img src="card/Layers_of_Feelings_T.png" alt="Layers_of_Feelings_T" class="w-full h-full object-cover" />
+            <figcaption class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center py-2 transform translate-y-full group-hover:translate-y-0 transition duration-300">Layers of Feelings</figcaption>
+          </figure>
+          <figure class="flex-shrink-0 w-120 h-80 relative group">
+            <img src="card/Perfect_Smile.png" alt="Perfect_Smile" class="w-full h-full object-cover" />
+            <figcaption class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center py-2 transform translate-y-full group-hover:translate-y-0 transition duration-300">Perfect Smile</figcaption>
+          </figure>
+          <figure class="flex-shrink-0 w-120 h-80 relative group">
+            <img src="card/There,_Perfect!.png" alt="There" class="w-full h-full object-cover" />
+            <figcaption class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center py-2 transform translate-y-full group-hover:translate-y-0 transition duration-300">There, Perfect!</figcaption>
+          </figure>
+          <figure class="flex-shrink-0 w-120 h-80 relative group">
+            <img src="card/When_You_Turn_Around....png" alt="When_You_Turn_Around" class="w-full h-full object-cover" />
+            <figcaption class="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white text-center py-2 transform translate-y-full group-hover:translate-y-0 transition duration-300">When You Turn Around</figcaption>
+          </figure>
+        </div>
+        <div class="flex justify-center mt-4">
+          <button id="prev" class="bg-[#FF88BB] text-3xl w-20 text-white p-2 rounded-full mx-2 hover:bg-pink-500">‹</button>
+          <button id="next" class="bg-[#FF88BB] text-3xl w-20 text-white p-2 rounded-full mx-2 hover:bg-pink-500">›</button>
         </div>
       </section>
 
-
       <hr class="border-2 border-[#FF88BB] my-4" />
-=======
->>>>>>> acf02d780e20b74d450bbdc0d4975fca3819a57d
 
       <!-- Song -->
       <section id="song" class="p-5 mx-auto mb-5">
@@ -174,6 +135,18 @@
           setTimeout(() => {
             el.classList.add('float-in');
           }, index * 200);
+        });
+
+        const carousel = document.getElementById('carousel');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+
+        prev.addEventListener('click', () => {
+          carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        next.addEventListener('click', () => {
+          carousel.scrollBy({ left: 300, behavior: 'smooth' });
         });
       });
     </script>
